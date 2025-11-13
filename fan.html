@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming CPU Parts Store | Premium Shop</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Home Button CSS -->
+  <style>
+    .home-btn {
+      margin-right: 15px;
+      font-size: 18px;
+      text-decoration: none;
+      color: white;
+      background: #444;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+    .home-btn:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+
+  <!-- ✅ HOME BUTTON -->
+  <a href="index.html" class="home-btn">🏠 Home</a>
+
+  <div class="logo">⚙️ Gaming CPU Parts</div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search CPUs, RAM, Storage..." />
+    <button>🔍</button>
+  </div>
+  <nav class="nav-links">
+    <a href="#">Sign In</a>
+    <a href="#">Orders</a>
+    <a href="#">Cart 🛒</a>
+  </nav>
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+</header>
+
+<nav class="category-nav">
+  <a data-category="all">All</a>
+  <a href="cpu.html">Processors</a>
+  <a href="graphicscards.html">Graphics Cards</a>
+  <a href="ram.html">RAM</a>
+  <a href="storage.html">Storage</a>
+  <a href="coolers.html">Coolers</a>
+  <a href="psu.html">Power Supply</a>
+  <a href="pccases.html">PC Cases</a>
+  <a href="fan.html">Fans</a>
+</nav>
+
+<section class="hero">
+  <h1>Build Your Ultimate Gaming PC 🎮</h1>
+  <p>Premium performance, next-gen power — unleash your gaming beast!</p>
+  <a href="#products" class="hero-btn">Shop Now</a>
+</section>
+
+<section id="products" class="products">
+ <h2>💨 Case & Gaming/LED Fans</h2>
+<div class="product-grid">
+  <div class="product-card" data-category="fan">
+    <img src="data:image/webp;base64,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" alt="Corsair LL120">
+    <h3>Corsair LL120</h3>
+    <span class="price">₹2,500</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="fan">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRoyImKuDPy_LJr7iQcTJ4BK3JK44EHqbRVTS4expTUB_nHkSCl8UNTbH6mxzIO_fFRY_1notYnjkOWdiWbu__YxJrU59skRIBBS074O3FvOAIYCwZaPXad5A" alt="Noctua NF-A12">
+    <h3>Noctua NF-A12</h3>
+    <span class="price">₹2,800</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="gaming">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSIdlome3ypjmBKOfUMefjXaS-WRK03_nIezMTwPX2qvDmfToREsFuPo8qk94FadnxLHn8Wx0TgiMbycX1I8kD6lwjgVM29PCxm4Hqab1c0zjK_N-E6FukBRg" alt="Cooler Master MasterFan MF120R RGB">
+    <h3>MasterFan MF120R RGB</h3>
+    <span class="price">₹2,700</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="fan">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQX9ZbkKMD6Rt2z9wfa4dZeWjGmlN6OtpnNYkk9CtpXoKmg1-npI157DUACI4z5uPG9ebdhumSlBtbu4oH2sBb1P5KfuL0v3QeDMshxYos" alt="Thermaltake Riing 12">
+    <h3>Thermaltake Riing 12</h3>
+    <span class="price">₹2,200</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="gaming">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTT6iiF8e6tG1yodYONRuP9hzzUeobpS873kcx_ksdhBO6zfw1hnxw1zVShCCcIl54r8CSZ6XRUOm-tVlyOAXzhqgQ-YXwZ1BH--bAwDhbpYXy6hed2WnXS0Q" alt="NZXT AER RGB 2">
+    <h3>NZXT AER RGB 2</h3>
+    <span class="price">₹3,300</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="fan">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR8rjGrdC_YC0EELmiFS-nIGpjSJ-UXsDiM8k4v-LidQC-Ie6hBlyMGNo5BTN-HDG1AE-EgWGzfe82Bf0V1cJMvTVTU2GGP7YfRrXBP6ks8FEgW1b_0NQTR" alt="ARCTIC F12">
+    <h3>ARCTIC F12</h3>
+    <span class="price">₹1,200</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="gaming">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTgNi4-j8AhLeHDGlUhSraCoRsS21-59pZ2PBJvn2302gUm6Ln--uF3LkOEk2fjo6Fu6RclnssRJjmZF22t7DEollpMDna6t_2P2DfnbvsDGj4oN3v9o4ZsXQ" alt="Corsair QL120 RGB">
+    <h3>Corsair QL120 RGB</h3>
+    <span class="price">₹3,400</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="fan">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTGJbN1JcnnTfaUhCeb4Os81snx51c2pTH1o9OKlPObU5HuzJZAEvcR_RNc0P2Z-WUF0Fy-zgDstIOvG6KElMLKR4E1Nn9mikzD_fmEkVHD248gBDDVjkId" alt="DeepCool RF120">
+    <h3>DeepCool RF120</h3>
+    <span class="price">₹1,900</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="gaming">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQX9ZbkKMD6Rt2z9wfa4dZeWjGmlN6OtpnNYkk9CtpXoKmg1-npI157DUACI4z5uPG9ebdhumSlBtbu4oH2sBb1P5KfuL0v3QeDMshxYos" alt="Thermaltake Riing Duo 12">
+    <h3>Thermaltake Riing Duo 12</h3>
+    <span class="price">₹3,500</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+
+  <div class="product-card" data-category="fan">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSkamavTBCZZqCplTFo90KQSl7MDLB6ZAKAPraqKpIhcg3LVgqK2JLQ7YzfKl3L80-mp7tAYxdVA1a6rWKTInv_MMMUwXolzYDg8xE97zREXsdXryKrde5oxQ" alt="Cooler Master MF120">
+    <h3>Cooler Master MF120</h3>
+    <span class="price">₹2,400</span>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+  </div>
+</div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>About</h3>
+      <a href="#">Company Info</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h3>Help</h3>
+      <a href="#">Returns</a>
+      <a href="#">Shipping</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2025 Gaming CPU Parts | Designed by Om Patel</p>
+</footer>
+
+
+<!-- ✅ CART SIDEBAR (unchanged) -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <button id="close-cart">✖</button>
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+    <strong>Total: ₹<span id="cart-total">0</span></strong>
+    <button id="checkout-btn" class="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<button id="cart-toggle" class="cart-toggle">🛒 Cart</button>
+
+
+<!-- ✅ FINAL BACK BUTTON WITH ANIMATION + ROUND STYLE -->
+<button class="back-btn" onclick="history.back()">⬅</button>
+
+<style>
+  /* ✅ Round Animated Back Button */
+  .back-btn {
+    position: fixed;
+    bottom: 22px;
+    left: 22px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #222;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+    transform: scale(1);
+  }
+
+  /* ✅ Hover effect */
+  .back-btn:hover {
+    background: #444;
+    transform: scale(1.12);
+  }
+
+  /* ✅ Dark Mode Support */
+  body.dark .back-btn {
+    background: #fff;
+    color: #000;
+  }
+  body.dark .back-btn:hover {
+    background: #ddd;
+  }
+
+  /* ✅ Home Button Dark Mode */
+  body.dark .home-btn {
+    background: #ddd;
+    color: #111;
+  }
+  body.dark .home-btn:hover {
+    background: #ccc;
+  }
+</style>
+<!-- ✅ END OF BACK BUTTON CODE -->
+
+
+<script src="script.js"></script>
+</body>
+</html>
