@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+.header {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.checkout-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-section {
+  flex: 3;
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  color: #232f3e;
+  margin-bottom: 15px;
+}
+
+.box input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.payment-options {
+  margin-bottom: 10px;
+}
+
+.payment-section.hidden {
+  display: none;
+}
+
+.summary-box {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.summary-box h3 {
+  color: #232f3e;
+}
+
+.summary-box p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+#placeOrderBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffd814;
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#placeOrderBtn:hover {
+  background-color: #f7ca00;
+}
+
+.footer {
+  background: #232f3e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#cartItems {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.cart-item span {
+  font-weight: 500;
+}
+
+.cart-item button {
+  background: none;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+}
+.cart-item button:hover {
+  text-decoration: underline;
+}
+/* ========================= CHECKOUT PAGE ========================= */
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.checkout-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #232f3e; /* Amazon dark blue */
+}
+
+/* ---------- LEFT SIDE (ADDRESS + PAYMENT) ---------- */
+.checkout-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff9900;
+  outline: none;
+}
+
+/* ---------- PAYMENT SECTION ---------- */
+.payment-options {
+  margin-top: 20px;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+#card-details,
+#upi-details {
+  margin-top: 10px;
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#card-details input,
+#upi-details input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ---------- PLACE ORDER BUTTON ---------- */
+.primary-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background: #ff9900;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #e68a00;
+}
+
+/* ---------- RIGHT SIDE (ORDER SUMMARY) ---------- */
+.order-summary {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.summary-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.summary-details p {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 3px;
+}
+
+.summary-details span {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.summary-total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 10px;
+  color: #232f3e;
+}
+
+/* ---------- SUCCESS SCREEN ---------- */
+.order-success {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 60px auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.order-success h1 {
+  color: #00a859;
+  margin-bottom: 15px;
+}
+
+.order-success p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.delivery-box {
+  background: #f0f9f4;
+  border: 1px solid #c9eac8;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+}

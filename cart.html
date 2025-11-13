@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script defer src="checkout.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo" onclick="window.location.href='index.html'">🛍️ MyStore</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+      <h3>Order Summary</h3>
+      <p>Total Items: <span id="total-items">0</span></p>
+      <p>Total Price: ₹<span id="total-price">0</span></p>
+      <button id="checkout-btn" class="btn-primary">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 MyStore — Inspired by Amazon</p>
+  </footer>
+
+  <script>
+    // === CART PAGE LOGIC ===
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalItemsElement = document.getElementById('total-items');
+    const totalPriceElement = document.getElementById('total-price');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function renderCart() {
+      cartItemsContainer.innerHTML = '';
+      let totalItems = 0;
+      let totalPrice = 0;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty. <a href="index.html">Shop now</a></p>';
+        checkoutBtn.disabled = true;
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'cart-item';
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="cart-item-details">
+            <h4>${item.name}</h4>
+            <p>₹${item.price}</p>
+            <div class="cart-quantity">
+              <button onclick="changeQuantity(${index}, -1)">−</button>
+              <span>${item.quantity}</span>
+              <button onclick="changeQuantity(${index}, 1)">+</button>
+            </div>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+          </div>
+        `;
+        cartItemsContainer.appendChild(itemDiv);
+
+        totalItems += item.quantity;
+        totalPrice += item.price * item.quantity;
+      });
+
+      totalItemsElement.textContent = totalItems;
+      totalPriceElement.textContent = totalPrice.toFixed(2);
+      checkoutBtn.disabled = false;
+    }
+
+    function changeQuantity(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    checkoutBtn.addEventListener('click', () => {
+      window.location.href = 'checkout.html';
+    });
+
+    renderCart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  background-color: #f6f6f6;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-container {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+h1 {
+  color: #007600;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 6px 0;
+  color: #333;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ffd814;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f7ca00;
+}

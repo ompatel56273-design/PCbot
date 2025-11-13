@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Successful | Prime Store</title>
+  <link rel="stylesheet" href="order-success.css" />
+</head>
+<body>
+
+<div class="success-container">
+  <div class="card">
+    <h1>✅ Order Placed Successfully!</h1>
+    <p>Your order has been confirmed and will be delivered soon.</p>
+    <div id="orderDetails"></div>
+    <button onclick="window.location.href='index.html'">Continue Shopping</button>
+  </div>
+</div>
+
+<script>
+  const order = JSON.parse(localStorage.getItem("orderSuccess"));
+  const orderDiv = document.getElementById("orderDetails");
+
+  if (order) {
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 4);
+
+    orderDiv.innerHTML = `
+      <p><strong>Order ID:</strong> ${order.id}</p>
+      <p><strong>Name:</strong> ${order.name}</p>
+      <p><strong>Address:</strong> ${order.address}</p>
+      <p><strong>Payment Method:</strong> ${order.payment.toUpperCase()}</p>
+      <p><strong>Amount Paid:</strong> ${order.total}</p>
+      <p><strong>Estimated Delivery:</strong> ${deliveryDate.toDateString()}</p>
+    `;
+    localStorage.removeItem("orderSuccess");
+  } else {
+    orderDiv.innerHTML = "<p>No recent order found.</p>";
+  }
+</script>
+
+</body>
+</html>
